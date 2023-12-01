@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "9ac87d55-8b19-42fe-a273-11a8064e18ab",
+		"name": "workshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30776223"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"CD0004\",\n    \"name\": \"Carlos Enrique Perez\",\n    \"score\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user?code=CD0005",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "CD0005"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
